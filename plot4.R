@@ -40,10 +40,6 @@ str(df)
 # checking current graphical device
 dev.cur()
 
-weekdays(df$DateTime)
-max(df$DateTime)
-
-df$DateTime[2] + days(1)
 
 # plotting to the screen
 
