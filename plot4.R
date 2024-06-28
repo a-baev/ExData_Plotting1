@@ -41,28 +41,6 @@ str(df)
 dev.cur()
 
 
-# plotting to the screen
-
-par(mfcol = c(2,2))
-
-hist(x = df$Global_active_power, xlab = 'Global Active Power (kilowatts)', ylab = "Frequency", col = 'red', main = 'Global Active Power')
-
-plot(x = df$DateTime, y = df$Global_active_power,  xlab = '', ylab = 'Global Active Power (kilowatts)', main = '', type = 'n', frame.plot = T, axes = F)
-lines(x = df$DateTime, y = df$Global_active_power)
-axis(side = 1, labels = c('Thu', 'Fri', 'Sat'),  at=c(min(df$DateTime),min(df$DateTime)+days(1), min(df$DateTime)+days(2)))
-axis(side = 2)
-    
-plot(x = df$DateTime, y = df$Voltage,  xlab = 'datetime', ylab = 'Voltage', main = '', type = 'n', frame.plot = T, axes = F)
-axis(side = 1, labels = c('Thu', 'Fri', 'Sat'),  at=c(min(df$DateTime),min(df$DateTime)+days(1), min(df$DateTime)+days(2)))
-axis(side = 2, )
-lines(x = df$DateTime, y = df$Voltage, col = 'black')
-
-plot(x = df$DateTime, y = df$Global_reactive_power,  xlab = 'datetime', ylab = 'Global_reactive_power', main = '', type = 'n', frame.plot = T, axes = F)
-axis(side = 1, labels = c('Thu', 'Fri', 'Sat'),  at=c(min(df$DateTime),min(df$DateTime)+days(1), min(df$DateTime)+days(2)))
-axis(side = 2, )
-lines(x = df$DateTime, y = df$Global_reactive_power, col = 'black')
-
-
 #plotting to plot4.png
 png(filename = 'plot4.png', width = 480, height = 480, units = 'px')
 
