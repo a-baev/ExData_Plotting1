@@ -40,10 +40,6 @@ str(df)
 # checking current graphical device
 dev.cur()
 
-weekdays(df$DateTime)
-max(df$DateTime)
-
-df$DateTime[2] + days(1)
 
 # plotting to the screen
 #plot(x = df$DateTime, y = df$Global_active_power,  xlab = '', ylab = 'Global Active Power (kilowatts)', main = '', type = 'n', frame.plot = T, axes = F)
